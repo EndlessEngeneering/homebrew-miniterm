@@ -1,9 +1,9 @@
 class Miniterm < Formula
   desc "A secure terminal application menu with macOS Keychain integration"
   homepage "https://github.com/EndlessEngeneering/miniterm"
-  url "https://github.com/EndlessEngeneering/miniterm/archive/refs/tags/V1.0.0.tar.gz"
+  url "https://github.com/EndlessEngeneering/miniterm/archive/refs/tags/V1.0.1.tar.gz"
   version "1.0.0"
-  sha256 "7ff95218bef24fd6a095c6b9164ff30deb9f37f2f546fdf549b7ed7e7994981d"
+  sha256 "5c221ff952a772e21995831d737aee721df873f3c9ebbab325bbfd577b1ae576"
 
   def install
     # 1. Store the source files cleanly inside libexec
