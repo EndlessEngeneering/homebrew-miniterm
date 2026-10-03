@@ -1,13 +1,19 @@
 class Miniterm < Formula
   desc "A secure terminal application menu with macOS Keychain integration"
-  homepage "https://github.com"
+  homepage "https://github.com/EndlessEngeneering/miniterm"
   url "https://github.com/EndlessEngeneering/miniterm/archive/refs/tags/V1.0.0.tar.gz"
   version "1.0.0"
   sha256 "7ff95218bef24fd6a095c6b9164ff30deb9f37f2f546fdf549b7ed7e7994981d"
 
   def install
+    # 1. Store the source files cleanly inside libexec
     libexec.install Dir["*"]
-    (bin/"miniterm").write_env_script (libexec/"miniterm.sh"), {}
+
+    # 2. Make sure the master bash script has explicit execution flags set
+    chmod 0755, libexec/"miniterm.sh"
+
+    # 3. Create a clean symlink in the system path instead of a wrapped script env
+    bin.install_symlink libexec/"miniterm.sh" => "miniterm"
   end
 
   test do
