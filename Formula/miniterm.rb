@@ -1,7 +1,7 @@
 class Miniterm < Formula
   desc "A secure terminal application menu with macOS Keychain integration"
   homepage "https://github.com"
-  url "https://github.com/archive/refs/tags/V1.0.0.tar.gz"
+  url "https://github.com/EndlessEngeneering/miniterm/archive/refs/tags/V1.0.0.tar.gz"
   version "1.0.0"
   sha256 "7ff95218bef24fd6a095c6b9164ff30deb9f37f2f546fdf549b7ed7e7994981d"
 
