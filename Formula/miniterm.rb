@@ -6,9 +6,7 @@ class Miniterm < Formula
   sha256 "7ff95218bef24fd6a095c6b9164ff30deb9f37f2f546fdf549b7ed7e7994981d"
 
   def install
-    # Move internal assets safely into libexec
     libexec.install Dir["*"]
-    # Write the global execution entry wrapper pointing to miniterm.sh
     (bin/"miniterm").write_env_script (libexec/"miniterm.sh"), {}
   end
 
